@@ -13,10 +13,11 @@ This is a minimalistic portfolio website showcasing my work, interests, and soci
 
 
 ### Skills Section
-![Skills Section](#) *(https://github.com/user-attachments/assets/901e4da8-3d5a-46f3-931a-7036b00cc400)*
+![Screenshot 2025-03-31 084659](https://github.com/user-attachments/assets/1bee1feb-1c3d-4efa-8f84-1fcde94d7827)
+
 
 ### Projects Section
-![Projects Section](#) *(https://github.com/user-attachments/assets/59f2eb39-8176-482a-832b-706ffa034e9e)*
+![Screenshot 2025-03-31 084712](https://github.com/user-attachments/assets/58f4f4ea-084f-4e2a-8a00-692694808236)
 
 ## Tech Stack
 - React.js
@@ -46,9 +47,3 @@ This is a minimalistic portfolio website showcasing my work, interests, and soci
    ```sh
    npm run dev
    ```
-
-## Contact
-- LinkedIn: [Your LinkedIn Profile](#) *(Replace with actual link)*
-- Twitter: [Your Twitter Handle](#) *(Replace with actual link)*
-- Email: adigupta.951@gmail.com
-
