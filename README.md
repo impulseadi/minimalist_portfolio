@@ -8,8 +8,8 @@ This is a minimalistic portfolio website showcasing my work, interests, and soci
 
 ## Screenshots
 ### Home Section
-![Home Section](#) *(https://github.com/user-attachments/assets/5e0a5472-6580-4caf-af9e-a73fc896c277)
-)*
+(https://github.com/user-attachments/assets/5e0a5472-6580-4caf-af9e-a73fc896c277)
+
 
 ### Skills Section
 ![Skills Section](#) *(https://github.com/user-attachments/assets/901e4da8-3d5a-46f3-931a-7036b00cc400)*
