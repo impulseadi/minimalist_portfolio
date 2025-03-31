@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const skills = [
   { name: "ReactJS", image: "https://tse3.mm.bing.net/th?id=OIP.IGAgoFLRQ54R3gtLiW5x2AHaE7&pid=Api&P=0&h=180" },
@@ -13,7 +13,19 @@ const skills = [
   { name: "DBMS", image: "https://static.vecteezy.com/system/resources/previews/026/642/681/original/dbms-icon-vector.jpg" },
 ];
 
+// Preload images for better performance
+const preloadImages = (images) => {
+  images.forEach((image) => {
+    const img = new Image();
+    img.src = image;
+  });
+};
+
 const Skills = () => {
+  useEffect(() => {
+    preloadImages(skills.map((s) => s.image));
+  }, []);
+
   return (
     <section className="py-20 px-6 mt-30 text-white text-center bg-black">
       {/* Title */}
@@ -28,7 +40,14 @@ const Skills = () => {
           <div key={index} className="flex flex-col items-center">
             {/* Image with hover effect */}
             <div className="w-24 h-24 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition">
-              <img src={skill.image} alt={skill.name} className="object-cover w-full h-full" />
+              <img 
+                src={skill.image} 
+                alt={skill.name} 
+                loading="lazy" 
+                decoding="async" 
+                className="object-cover w-full h-full opacity-0"
+                onLoad={(e) => e.currentTarget.classList.add("opacity-100", "transition-opacity", "duration-500")}
+              />
             </div>
             {/* Name */}
             <p className="text-white text-lg mt-3 font-mono">{skill.name}</p>
