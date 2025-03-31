@@ -24,6 +24,41 @@ const projects = [
     }
 ];
 
+const ProjectCard = ({ project }) => (
+    <div className="relative group flex flex-col items-center bg-gray-700 p-6 rounded-2xl shadow-lg overflow-hidden">
+        
+        {/* Blurred Background Behind Image */}
+        <div className="absolute inset-0 bg-gray-600 opacity-40 blur-lg rounded-2xl -z-10"></div>
+
+        {/* Image without Lazy Loading */}
+        <div className="relative w-96 h-56 rounded-2xl overflow-hidden transition-transform duration-300 transform group-hover:scale-105">
+            <img 
+                src={project.image} 
+                alt={project.name} 
+                decoding="async"
+                className="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:brightness-125 transition-opacity duration-500 ease-in-out opacity-0"
+                onLoad={(e) => e.currentTarget.classList.add("opacity-100")}
+            />
+        </div>
+
+        {/* Name & Description */}
+        <div className="text-center mt-6">
+            <h3 className="text-3xl font-semibold text-white">{project.name}</h3>
+            <p className="text-gray-300 text-xl mt-4 max-w-lg">{project.description}</p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-6 flex gap-6">
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white text-xl underline transition-transform duration-300 hover:scale-110">
+                GitHub
+            </a>
+            <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-white text-xl underline transition-transform duration-300 hover:scale-110">
+                Live Demo
+            </a>
+        </div>
+    </div>
+);
+
 const Projects = () => {
     return (
         <section className="py-20 px-6 mt-20 text-white text-center bg-black">
@@ -34,37 +69,7 @@ const Projects = () => {
             {/* Project Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                 {projects.map((project, index) => (
-                    <div key={index} className="relative group flex flex-col items-center bg-gray-700 p-6 rounded-2xl shadow-lg overflow-hidden">
-                        
-                        {/* Blurred Background Behind Image */}
-                        <div className="absolute inset-0 bg-gray-600 opacity-40 blur-lg rounded-2xl -z-10"></div>
-
-                        {/* Image with Hover Effect */}
-                        <div className="relative w-96 h-56 rounded-2xl overflow-hidden transition-transform duration-300 transform group-hover:scale-105">
-    <img 
-        src={project.image} 
-        alt={project.name} 
-        className="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:brightness-125" 
-    />
-</div>
-
-
-                        {/* Name & Description */}
-                        <div className="text-center mt-6">
-                            <h3 className="text-3xl font-semibold text-white">{project.name}</h3>
-                            <p className="text-gray-300 text-xl mt-4 max-w-lg">{project.description}</p>
-                        </div>
-
-                        {/* Links */}
-                        <div className="mt-6 flex gap-6">
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white text-xl underline transition-transform duration-300 hover:scale-110">
-                                GitHub
-                            </a>
-                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-white text-xl underline transition-transform duration-300 hover:scale-110">
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
+                    <ProjectCard key={index} project={project} />
                 ))}
             </div>
         </section>
