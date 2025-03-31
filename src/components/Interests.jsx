@@ -14,7 +14,7 @@ const Interests = () => {
       {interests.map((interest, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="w-24 h-24 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition">
-            <img src={interest.image} alt={interest.name} className="object-cover w-full h-full" />
+            <img src={interest.image} alt={interest.name} loading="lazy" className="object-cover w-full h-full" />
           </div>
           <p className="text-gray-300 mt-2">{interest.name}</p>
         </div>
