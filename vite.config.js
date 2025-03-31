@@ -4,5 +4,15 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  
+  build: {
+    minify: 'terser', // Minifies JS with Terser
+    terserOptions: {
+      compress: { drop_console: true }, // Removes console logs
+    },
+  },
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000, immutable',
+    },
+  },
 })
