@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/connect" element={<Connect />} />
         </Routes>
         <Footer/>
+        <Analytics/>
       </div>
     </Router>
   );
