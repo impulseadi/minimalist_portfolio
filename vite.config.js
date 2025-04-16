@@ -9,6 +9,7 @@ export default defineConfig({
     terserOptions: {
       compress: { drop_console: true }, // Removes console logs
     },
+    outDir: 'dist'
   },
   server: {
     headers: {
