@@ -21,7 +21,22 @@ const projects = [
         description: "Developed an engaging and interactive dice game web application using React.js",
         github: "https://github.com/impulseadi/ReactDiceGame",
         live: "https://timely-belekoy-5b7add.netlify.app/"
-    }
+    },
+        {
+     
+    name: "GreenCart Ecommerce Application",
+    description: "Full-stack Grocery Delivery platform using the MERN stack, enabling users to browse,filter, and order groceries by category.",
+    image: "https://github.com/user-attachments/assets/23f27610-402b-4197-9ded-916c8f3d5c96",
+    github: "https://github.com/impulseadi/GreenCart",
+    live: "https://green-cart-sooty.vercel.app/"
+   },
+    {
+        name: "Klimate Weather Application",
+        image: "https://github.com/user-attachments/assets/42e7f062-b427-4fcc-9d89-7fe3f3acc52a",
+        description: "Developed an engaging and interactive Klimate Weather Application using React, Tanstack Query, Shadcn, Recharts, Tailwind and Typescript",
+        github: "https://github.com/impulseadi/Klimates",
+        live: "https://klimates-6d1x.vercel.app/",
+    },
 ];
 
 const ProjectCard = ({ project }) => (
