@@ -15,13 +15,6 @@ const projects = [
         github: "https://github.com/impulseadi/imagify",
         live: "https://imagify-frontend-gnsc.onrender.com/"
     },
-    {
-        name: "React Dice Game",
-        image: "https://github.com/user-attachments/assets/0fd188a4-1f46-4b4f-942e-1f8a2d1b552d",
-        description: "Developed an engaging and interactive dice game web application using React.js",
-        github: "https://github.com/impulseadi/ReactDiceGame",
-        live: "https://timely-belekoy-5b7add.netlify.app/"
-    },
         {
      
     name: "GreenCart Ecommerce Application",
@@ -36,6 +29,13 @@ const projects = [
         description: "Developed an engaging and interactive Klimate Weather Application using React, Tanstack Query, Shadcn, Recharts, Tailwind and Typescript",
         github: "https://github.com/impulseadi/Klimates",
         live: "https://klimates-6d1x.vercel.app/",
+    },
+     {
+        name: "React Dice Game",
+        image: "https://github.com/user-attachments/assets/0fd188a4-1f46-4b4f-942e-1f8a2d1b552d",
+        description: "Developed an engaging and interactive dice game web application using React.js",
+        github: "https://github.com/impulseadi/ReactDiceGame",
+        live: "https://timely-belekoy-5b7add.netlify.app/"
     },
 ];
 
